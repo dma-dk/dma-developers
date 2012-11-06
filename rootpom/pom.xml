@@ -43,7 +43,7 @@
     <url>http://http://www.dma.dk/</url>
   </organization>
 
-  <inceptionYear>2012</inceptionYear>
+  <inceptionYear>2011</inceptionYear>
 
   <ciManagement>
     <system>Jenkins</system>
@@ -179,7 +179,8 @@
       </snapshots>
     </repository>
     <repository>
-      <id>Codehaus Snapshots</id>
+      <id>dma-snapshot-repository</id>
+      <name>Dma Snapshot Repository</name>
       <url>http://repository-dma.forge.cloudbees.com/snapshot/</url>
       <snapshots>
         <enabled>true</enabled>
