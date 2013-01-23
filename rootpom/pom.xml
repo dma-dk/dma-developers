@@ -4,7 +4,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>dk.dma</groupId>
   <artifactId>dma-root-pom</artifactId>
-  <version>1</version>
+  <!-- Versions here is just a single incremental number no '.' -->
+  <version>2</version>
   <packaging>pom</packaging>
   <name>Dma Root Pom</name>
   <description>The root pom for all maven projects under dma.dk</description>
@@ -117,7 +118,7 @@
           <dependency>
             <groupId>dk.dma.tools</groupId>
             <artifactId>dma-build-tool</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1</version>
           </dependency>
         </dependencies>
         <configuration>

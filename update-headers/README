@@ -1,0 +1,3 @@
+Recursively replace headers on all java files
+
+> find . -name "*.java" -exec ../dma-developers/update-headers/update_headers.sh {} \; 

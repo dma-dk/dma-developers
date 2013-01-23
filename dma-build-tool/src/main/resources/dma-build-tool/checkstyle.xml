@@ -31,9 +31,11 @@
     <module name="UnnecessaryParentheses"/>
     <module name="ModifierOrder"/>
     <module name="RedundantModifier"/>
+    <!-- 
     <module name="JavadocType">
       <property name="scope" value="public"/>
     </module>
+     -->
     <module name="ConstantName"/>
   </module>
   <module name="Header">
