@@ -2,10 +2,6 @@ dma-developers
 ==============
 
 
-
-
-
-
 Checkstyle
 ===============================
 Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.
@@ -36,3 +32,10 @@ b) go to Preferences->Checkstyle
    (Replace the path with correct one )
    Press OK a lot of times
 c) Right click a project and select Activate Checkstyle
+
+License headers
+========================
+
+Script to update headers in a project
+
+     find . -name "*.java" -exec ../dma-developers/update-headers/update_headers.sh {} \; 
