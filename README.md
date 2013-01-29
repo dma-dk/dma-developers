@@ -2,6 +2,36 @@ dma-developers
 ==============
 This repositories contains various development tools. Useful when working with any of the dma-dk repositories.
 
+Scripts
+========================
+The script folder contains various small shell scripts to
++ Replace license headers in files
++ Replace tabs in files
+
+Rootpom
+=========================
+The rootpom folder contains the pom that all dma-dk projects inherit.
+Whenever updates are made to it. The version is incremented by 1.
+And a new version of the pom is uploaded to cloudbees (for use by other developers) by invoking
+> mvn deploy
+Use must have a ~/.m2/settings.xml file with your cloudbees username and password before you can use it
+<settings>
+    <servers>
+        <server>
+            <id>dma-release-repository</id>
+            <username>YOUR_USERNAME</username>
+            <password>YOUR_PASSWORD</password>
+        </server>
+        <server>
+            <id>dma-snapshot-repository</id>
+            <username>YOUR_USERNAME</username>
+            <password>YOUR_PASSWORD</password>
+        </server>
+    </servers>
+</settings>        
+
+
+
 Checkstyle
 ===============================
 Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.
@@ -34,8 +64,7 @@ It can also be set up in Eclipse. By following this short guide:
 
 Now right click any project and select Activate Checkstyle
 
-License headers
-========================
-Script to update headers in a project. You might need to update the path to the shell script.
-
-     find . -name "*.java" -exec ../dma-developers/update-headers/update_headers.sh {} \; 
+Modifying the checkstyle configuratino is a bit involved.
+Whenever the checkstyle configuration is updated you need to increment the version by one and deploy it to cloudbees
+(see the above section on howto). After that you need to update the root pom to point at the new version and upload a new
+version of the root pom. Finally you need to point all the projects at the new root pom.
