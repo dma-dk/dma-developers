@@ -14,24 +14,25 @@ from other maven projects.
 
 Checkstyle can be run in 2 ways:
 
-1) CLI
+##### CLI
 At the command line it can be invoked by calling "mvn checkstyle:check". It will fail if
 there are any violations in the project. 
 
-2) Eclipse
+##### Eclipse
 It can also be set up in Eclipse. By following this short guide:
-a) Install the checkstyle plugin
-b) go to Preferences->Checkstyle
-   Select New 
-   Choose External Configuration
-   Name = DMA
-   Location = the full path to dma-developers/dma-build-tool/src/main/resources/dma-build-tool/checkstyle.xml
-   Choose Addition properties and add this property:
-     name = checkstyle.header.file
-     value = dma-developers/dma-build-tool/src/main/resources/dma-build-tool/LICENSE.txt
-   (Replace the above path with the full correct one)
-   Press OK a 3 times
-c) Right click any project and select Activate Checkstyle
++ Install the checkstyle plugin
++ Go to Preferences->Checkstyle
++ Select New 
++ Choose External Configuration
++ Name = DMA
++   Location = the full path to dma-developers/dma-build-tool/src/main/resources/dma-build-tool/checkstyle.xml
++   Choose Addition properties and add this property:
++     name = checkstyle.header.file
++     value = dma-developers/dma-build-tool/src/main/resources/dma-build-tool/LICENSE.txt
++   (Replace the above path with the full correct one)
++   Press OK a 3 times
+
+Now right click any project and select Activate Checkstyle
 
 License headers
 ========================
