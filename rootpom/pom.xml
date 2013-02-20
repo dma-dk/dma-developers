@@ -5,7 +5,7 @@
   <groupId>dk.dma</groupId>
   <artifactId>dma-root-pom</artifactId>
   <!-- Versions here is just a single incremental number no '.' -->
-  <version>3</version>
+  <version>4</version>
   <packaging>pom</packaging>
   <name>Dma Root Pom</name>
   <description>The root pom for all maven projects under dma.dk</description>
