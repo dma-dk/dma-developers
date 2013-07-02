@@ -5,7 +5,7 @@
   <groupId>dk.dma</groupId>
   <artifactId>dma-root-pom</artifactId>
   <!-- Versions here is just a single incremental number no '.' -->
-  <version>4</version>
+  <version>6</version>
   <packaging>pom</packaging>
   <name>Dma Root Pom</name>
   <description>The root pom for all maven projects under dma.dk</description>
@@ -118,11 +118,12 @@
           <dependency>
             <groupId>dk.dma.tools</groupId>
             <artifactId>dma-build-tool</artifactId>
-            <version>2</version>
+            <version>6</version>
           </dependency>
         </dependencies>
         <configuration>
           <configLocation>dma-build-tool/checkstyle.xml</configLocation>
+          <suppressionsLocation>dma-build-tool/checkstyle-suppressions.xml</suppressionsLocation>
           <headerLocation>dma-build-tool/LICENSE.txt</headerLocation>
           <failsOnError>true</failsOnError>
           <enableRulesSummary>true</enableRulesSummary>
@@ -219,7 +220,9 @@
         <version>2.9.1</version>
         <configuration>
           <configLocation>dma-build-tool/checkstyle.xml</configLocation>
+          <suppressionsLocation>dma-build-tool/checkstyle-suppressions.xml</suppressionsLocation>
           <headerLocation>dma-build-tool/LICENSE.txt</headerLocation>
+          
           <failsOnError>true</failsOnError>
           <enableRulesSummary>true</enableRulesSummary>
           <consoleOutput>true</consoleOutput>
