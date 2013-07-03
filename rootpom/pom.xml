@@ -5,7 +5,7 @@
   <groupId>dk.dma</groupId>
   <artifactId>dma-root-pom</artifactId>
   <!-- Versions here is just a single incremental number no '.' -->
-  <version>7</version>
+  <version>8</version>
   <packaging>pom</packaging>
   <name>Dma Root Pom</name>
   <description>The root pom for all maven projects under dma.dk</description>
@@ -156,7 +156,20 @@
     </plugins>
 
   </build>
-  
+  <pluginRepositories>
+        <!-- nødvendig for download dma-build-tools -->
+        <pluginRepository>
+            <id>dma-releases</id>
+            <name>Dma Release Repository</name>
+            <url>http://repository-dma.forge.cloudbees.com/release/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>     
+    </pluginRepositories>
     <distributionManagement>
         <repository>
             <id>dma-release-repository</id>
