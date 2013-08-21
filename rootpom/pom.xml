@@ -46,7 +46,7 @@
 		<dependencies.guava.version>14.0.1</dependencies.guava.version>
 		<dependencies.jsr166e.version>10.01.2013</dependencies.jsr166e.version>
 		<dependencies.metrics.version>3.0.1</dependencies.metrics.version>
-		<dependencies.jetty.version>9.0.4.v20130625</dependencies.jetty.version>
+		<dependencies.jetty.version>9.0.5.v20130815</dependencies.jetty.version>
 		<dependencies.slf4j.version>1.7.5</dependencies.slf4j.version>
 	</properties>
 
@@ -269,7 +269,7 @@
 					<dependency>
 						<groupId>dk.dma.tools</groupId>
 						<artifactId>dma-build-tool</artifactId>
-						<version>6</version>
+						<version>7</version>
 					</dependency>
 				</dependencies>
 				<configuration>
