@@ -13,22 +13,25 @@ Rootpom
 The rootpom folder contains the pom that all dma-dk projects inherit.
 Whenever updates are made to it. The version is incremented by 1.
 And a new version of the pom is uploaded to cloudbees (for use by other developers) by invoking
-> mvn deploy
-Use must have a ~/.m2/settings.xml file with your cloudbees username and password before you can use it
-<settings>
-    <servers>
-        <server>
-            <id>dma-release-repository</id>
-            <username>YOUR_USERNAME</username>
-            <password>YOUR_PASSWORD</password>
-        </server>
-        <server>
-            <id>dma-snapshot-repository</id>
-            <username>YOUR_USERNAME</username>
-            <password>YOUR_PASSWORD</password>
-        </server>
-    </servers>
-</settings>        
+
+    mvn deploy
+
+Use must have `~/.m2/settings.xml` file with your cloudbees username and password before you can use it
+
+    <settings>
+        <servers>
+            <server>
+                <id>dma-release-repository</id>
+                <username>YOUR_USERNAME</username>
+                <password>YOUR_PASSWORD</password>
+            </server>
+            <server>
+                <id>dma-snapshot-repository</id>
+                <username>YOUR_USERNAME</username>
+                <password>YOUR_PASSWORD</password>
+            </server>
+        </servers>
+    </settings>        
 
 Coding conventions
 ===============================
