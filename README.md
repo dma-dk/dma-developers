@@ -48,13 +48,13 @@ Import in Eclipse
 
     Preferences -> Java -> Code Style -> Formatter -> Import
 
-##### Line endings handling
+##### Line endings
 To handle line endings issues between Windows and Linux/Mac it is recommended to configure
 Eclipse or other IDE to always use LF. In Eclipse:
 
     Preferences -> General -> Workspace -> New text file line delimiter -> Other: Unix
 
-Alternatively Git can be configured to convert line endings
+Alternatively Git can be configured to convert line endings on Windows
 
     git config --global core.autocrlf true
 
