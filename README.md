@@ -13,23 +13,58 @@ Rootpom
 The rootpom folder contains the pom that all dma-dk projects inherit.
 Whenever updates are made to it. The version is incremented by 1.
 And a new version of the pom is uploaded to cloudbees (for use by other developers) by invoking
-> mvn deploy
-Use must have a ~/.m2/settings.xml file with your cloudbees username and password before you can use it
-<settings>
-    <servers>
-        <server>
-            <id>dma-release-repository</id>
-            <username>YOUR_USERNAME</username>
-            <password>YOUR_PASSWORD</password>
-        </server>
-        <server>
-            <id>dma-snapshot-repository</id>
-            <username>YOUR_USERNAME</username>
-            <password>YOUR_PASSWORD</password>
-        </server>
-    </servers>
-</settings>        
 
+    mvn deploy
+
+Use must have `~/.m2/settings.xml` file with your cloudbees username and password before you can use it
+
+    <settings>
+        <servers>
+            <server>
+                <id>dma-release-repository</id>
+                <username>YOUR_USERNAME</username>
+                <password>YOUR_PASSWORD</password>
+            </server>
+            <server>
+                <id>dma-snapshot-repository</id>
+                <username>YOUR_USERNAME</username>
+                <password>YOUR_PASSWORD</password>
+            </server>
+        </servers>
+    </settings>        
+
+Coding conventions
+===============================
+Coding conventions are defined by Checkstyle (see section below). The convention
+on whitespace, text file encoding and line endings is:
+  * UTF-8 text file encoding
+  * Tab policy: spaces only
+  * Indentation size 4 and tab size 8
+  * LF line endings
+
+##### Eclipse formatter
+The project contains an Eclipse formatter that can be used
+    
+    resources/dma_eclipse_formatter.xml
+
+Import in Eclipse
+
+    Preferences -> Java -> Code Style -> Formatter -> Import
+
+##### Line endings
+To handle line endings issues between Windows and Linux/Mac it is recommended to configure
+Eclipse or other IDE to always use LF. In Eclipse:
+
+    Preferences -> General -> Workspace -> New text file line delimiter -> Other: Unix
+
+Alternatively Git can be configured to convert line endings on Windows
+
+    git config --global core.autocrlf true
+
+##### Text file encoding
+Configure IDE to use UTF-8. For Eclipse
+
+    Preferences -> General -> Workspace -> Text file encoding -> Other: UTF-8
 
 
 Checkstyle
@@ -68,3 +103,4 @@ Modifying the checkstyle configuratino is a bit involved.
 Whenever the checkstyle configuration is updated you need to increment the version by one and deploy it to cloudbees
 (see the above section on howto). After that you need to update the root pom to point at the new version and upload a new
 version of the root pom. Finally you need to point all the projects at the new root pom.
+
