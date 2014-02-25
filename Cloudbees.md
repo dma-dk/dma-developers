@@ -15,6 +15,7 @@ Settings.xml for Cloudbees
 In order to deploy files to cloudbees you need to have set up ~/.m2/settings.xml correctly.
 In should contain the following lines, replacing USERNAME and PASSWORD
 ```xml
+<settings>
 <servers>
   <server>
     <id>dma-release-repository</id>
@@ -27,6 +28,7 @@ In should contain the following lines, replacing USERNAME and PASSWORD
     <password>PASSWORD</password>
   </server>
 </servers>
+</settings>
 ```
 you should now be able to deploy your files, either snapshots or releases.
 
