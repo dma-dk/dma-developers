@@ -112,6 +112,7 @@ Prerequisites
   * Current version is snapshot version
   * SCM info in pom.xml. E.g.
 
+
     <scm>
         <connection>scm:git:git@github.com:dma-dk/dma-commons.git</connection>
         <developerConnection>scm:git:git@github.com:dma-dk/dma-commons.git</developerConnection>
