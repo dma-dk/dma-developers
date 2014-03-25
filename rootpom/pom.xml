@@ -6,7 +6,7 @@
   <groupId>dk.dma</groupId>
   <artifactId>dma-root-pom</artifactId>
   <!-- Versions here is just a single incremental number no '.' -->
-  <version>13</version>
+  <version>14</version>
   <packaging>pom</packaging>
   <name>Dma Root Pom</name>
   <description>The root pom for all maven projects under dma.dk</description>
@@ -312,7 +312,16 @@
         <artifactId>maven-overview-plugin</artifactId>
         <version>1.6</version>
       </plugin>
-
+      
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.5</version>
+          <configuration>
+            <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+            <mavenExecutorId>forked-path</mavenExecutorId>
+          </configuration>
+      </plugin>
     </plugins>
   </build>
 
