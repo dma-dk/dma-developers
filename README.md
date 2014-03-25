@@ -107,6 +107,39 @@ version of the root pom. Finally you need to point all the projects at the new r
 Release process
 ===============================
 
+Install gpg2 and make key
+
+    gpg2 --gen-key
+
+Required maven settings `~/.m2/settings.xml`
+
+    <settings>
+        <servers>
+            <server>
+                <id>dma-release-repository</id>
+                <username>user</username>
+                <password>password</password>
+            </server>
+            <server>
+                <id>dma-snapshot-repository</id>
+                <username>user</username>
+                <password>password</password>
+            </server>
+        </servers>
+        <profiles>
+            <profile>
+                <id>gpg</id>
+                <properties>
+                    <gpg.executable>gpg2</gpg.executable>
+                    <gpg.passphrase>mypassphrase</gpg.passphrase>
+                </properties>
+            </profile>
+        </profiles>
+        <activeProfiles>
+            <activeProfile>gpg</activeProfile>
+        </activeProfiles>
+    </settings>        
+
 Make sure that working copy up-to-date and without local modifications, and the current version is a snapshot version.
 
 pom.xml must contain SCM details for the project. E.g.:
@@ -121,4 +154,10 @@ When prompted for SCM release tag use: `vX.Y`
 
 Releasing
 
-    mvn release:clean release:prepare release:perform
+    mvn release:clean
+    mvn release:prepare
+    mvn release:perform -Darguments=-Dgpg.passphrase=PASSWORD
+
+
+
+
