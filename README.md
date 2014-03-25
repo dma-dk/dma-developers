@@ -107,11 +107,9 @@ version of the root pom. Finally you need to point all the projects at the new r
 Release process
 ===============================
 
-Prerequisites
-  * Working copy up-to-date and without local modifications
-  * Current version is snapshot version
-  * SCM info in pom.xml. E.g.
+Make sure that working copy up-to-date and without local modifications, and the current version is a snapshot version.
 
+pom.xml must contain SCM details for the project. E.g.:
 
     <scm>
         <connection>scm:git:git@github.com:dma-dk/dma-commons.git</connection>
