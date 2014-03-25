@@ -107,29 +107,17 @@ version of the root pom. Finally you need to point all the projects at the new r
 Release process
 ===============================
 
-Make sure working copy is up-to-date and without local modifications
+Prerequisites
+  * Working copy up-to-date and without local modifications
+  * Current version is snapshot version
+  * SCM info in pom.xml. E.g.
 
-#### Set new version
+    <scm>
+        <connection>scm:git:git@github.com:dma-dk/dma-commons.git</connection>
+        <developerConnection>scm:git:git@github.com:dma-dk/dma-commons.git</developerConnection>
+        <url>git@github.com:dma-enav/e-Navigation.git</url>
+    </scm>
 
-    mvn versions:set -DgenerateBackupPoms=false -DnewVersion=X.Y
+Releasing
 
-#### Verify and commit
-
-    mvn clean verify checkstyle:check
-    git commit -a -m "Release X.Y"
-
-#### Deploy
-
-    mvn deploy
-
-#### SCM tagging
-
-    mvn scm:tag -Dtag="vX.Y"
-
-#### Bump development version
-
-    mvn versions:set -DgenerateBackupPoms=false -DnewVersion=X.Z-SNAPSHOT
-    mvn clean install
-    git commit -a -m "New development version"
-    git push
-
+    mvn release:clean release:prepare release:perform
