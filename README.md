@@ -117,6 +117,8 @@ pom.xml must contain SCM details for the project. E.g.:
         <url>git@github.com:dma-enav/e-Navigation.git</url>
     </scm>
 
+When prompted for SCM release tag use: `vX.Y`
+
 Releasing
 
     mvn release:clean release:prepare release:perform
