@@ -104,3 +104,32 @@ Whenever the checkstyle configuration is updated you need to increment the versi
 (see the above section on howto). After that you need to update the root pom to point at the new version and upload a new
 version of the root pom. Finally you need to point all the projects at the new root pom.
 
+Release process
+===============================
+
+Make sure working copy is up-to-date and without local modifications
+
+#### Set new version
+
+    mvn versions:set -DgenerateBackupPoms=false -DnewVersion=X.Y
+
+#### Verify and commit
+
+    mvn clean verify checkstyle:check
+    git commit -a -m "Release X.Y"
+
+#### Deploy
+
+    mvn deploy
+
+#### SCM tagging
+
+    mvn scm:tag -Dtag="vX.Y"
+
+#### Bump development version
+
+    mvn versions:set -DgenerateBackupPoms=false -DnewVersion=X.Z-SNAPSHOT
+    mvn clean install
+    git commit -a -m "New development version"
+    git push
+
