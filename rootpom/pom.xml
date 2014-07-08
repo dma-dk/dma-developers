@@ -6,7 +6,7 @@
   <groupId>dk.dma</groupId>
   <artifactId>dma-root-pom</artifactId>
   <!-- Versions here is just a single incremental number no '.' -->
-  <version>16</version>
+  <version>17</version>
   <packaging>pom</packaging>
   <name>Dma Root Pom</name>
   <description>The root pom for all maven projects under dma.dk</description>
@@ -274,7 +274,7 @@
           <dependency>
             <groupId>dk.dma.tools</groupId>
             <artifactId>dma-build-tool</artifactId>
-            <version>7</version>
+            <version>8</version>
           </dependency>
         </dependencies>
         <configuration>
