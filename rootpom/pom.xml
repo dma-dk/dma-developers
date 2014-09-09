@@ -6,7 +6,7 @@
   <groupId>dk.dma</groupId>
   <artifactId>dma-root-pom</artifactId>
   <!-- Versions here is just a single incremental number no '.' -->
-  <version>20</version>
+  <version>21</version>
   <packaging>pom</packaging>
   <name>Dma Root Pom</name>
   <description>The root pom for all maven projects under dma.dk</description>
@@ -294,6 +294,7 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>2.9.1</version>
         <configuration>
+          <additionalparam>-Xdoclint:none</additionalparam>
           <excludePackageNames>
             *.internal.*:*.deprecated.*:*.tck.*:*.test.*:*.jcip.*:*.examples.*:
           </excludePackageNames>
@@ -331,6 +332,7 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>2.9.1</version>
         <configuration>
+          <additionalparam>-Xdoclint:none</additionalparam>
           <excludePackageNames>
             
 						*.internal.*:*.tck.*:*.test.*:*.jcip.*:*.examples.*:*.testcases.*:
