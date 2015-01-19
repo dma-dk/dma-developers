@@ -6,7 +6,7 @@
   <groupId>dk.dma</groupId>
   <artifactId>dma-root-pom</artifactId>
   <!-- Versions here is just a single incremental number no '.' -->
-  <version>21</version>
+  <version>22</version>
   <packaging>pom</packaging>
   <name>Dma Root Pom</name>
   <description>The root pom for all maven projects under dma.dk</description>
@@ -43,9 +43,9 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <dependencies.guava.version>17.0</dependencies.guava.version>
-    <dependencies.metrics.version>3.0.1</dependencies.metrics.version>
+    <dependencies.metrics.version>3.1.0</dependencies.metrics.version>
     <dependencies.slf4j.version>1.7.7</dependencies.slf4j.version>
-    
+
     <dependencies.jetty.version>9.2.1.v20140609</dependencies.jetty.version>
     <dependencies.servlet.version>3.1.0</dependencies.servlet.version>
     <dependencies.jersey.version>2.9.1</dependencies.jersey.version>
@@ -334,9 +334,9 @@
         <configuration>
           <additionalparam>-Xdoclint:none</additionalparam>
           <excludePackageNames>
-            
+
 						*.internal.*:*.tck.*:*.test.*:*.jcip.*:*.examples.*:*.testcases.*:
-					
+
           </excludePackageNames>
           <aggregate>true</aggregate>
           <links>
