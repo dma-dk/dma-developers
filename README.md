@@ -1,4 +1,4 @@
-dma-developers
+dma-developers [![Build Status](https://travis-ci.com/dma-dk/dma-developers.svg?branch=master)](https://travis-ci.com/dma-dk/dma-developers)
 ==============
 This repositories contains various development tools. Useful when working with any of the dma-dk repositories.
 
