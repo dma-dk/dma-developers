@@ -1,3 +1,4 @@
 language: java
 jdk: openjdk8
 script: mvn -f rootpom/pom.xml install
+script: mvn -f dma-build-tool/pom.xml install
