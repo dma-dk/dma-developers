@@ -19,7 +19,7 @@
     <parent>
     <groupId>dk.dma</groupId>
     <artifactId>dma-root-pom</artifactId>
-    <version>24</version>
+    <version>25</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>dk.dma.tools</groupId>
