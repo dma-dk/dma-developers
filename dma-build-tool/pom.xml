@@ -19,7 +19,7 @@
     <parent>
     <groupId>dk.dma</groupId>
     <artifactId>dma-root-pom</artifactId>
-    <version>24</version>
+    <version>25</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>dk.dma.tools</groupId>
@@ -28,17 +28,4 @@
   <artifactId>dma-build-tool</artifactId>
   <name>DMA Build-Tool</name>
   <description>DMA Build-Tool</description>
-  
-    <repositories>
-    <repository>
-        <id>dmasrc-visualstudio-com-dmasrc-e-navigation</id>
-        <url>https://dmasrc.pkgs.visualstudio.com/_packaging/E-navigation/maven/v1</url>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-      </repository>
-  </repositories>
 </project>
