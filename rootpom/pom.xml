@@ -1,408 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
   http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>dk.dma</groupId>
-  <artifactId>dma-root-pom</artifactId>
-  <!-- Versions here is just a single incremental number no '.' -->
-  <version>24</version>
-  <packaging>pom</packaging>
-  <name>Dma Root Pom</name>
-  <description>The root pom for all maven projects under dma.dk</description>
-  <url>https://github.com/dma-dk</url>
-
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-
-  <organization>
-    <name>Danish Maritime Authority</name>
-    <url>http://http://www.dma.dk/</url>
-  </organization>
-
-  <inceptionYear>2011</inceptionYear>
-
-  <developers>
-    <developer>
-        <name>Rasmus Madsen Jensen</name>
-        <email>rmj@dma.dk</email>
-        <organization>DMA</organization>
-        <organizationUrl>https://dma.dk</organizationUrl>
-    </developer>
-  </developers>
-
-  <scm>
-      <connection>scm:git:git://github.com/dma-dk/dma-developers.git</connection>
-      <developerConnection>scm:git:ssh://github.com:dma-dk/dma-developers.git</developerConnection>
-      <url>https://github.com/dma-dk/dma-developers</url>
-  </scm>
-
-  <mailingLists>
-    <mailingList>
-      <name>Dma group</name>
-      <subscribe>http://groups.google.com/group/dma-dk/subscribe</subscribe>
-      <archive>http://groups.google.com/group/dma-dk</archive>
-    </mailingList>
-  </mailingLists>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <dependencies.guava.version>21.0</dependencies.guava.version>
-    <dependencies.metrics.version>3.1.0</dependencies.metrics.version>
-    <dependencies.slf4j.version>1.7.23</dependencies.slf4j.version>
-
-    <dependencies.jetty.version>9.4.0.v20161208</dependencies.jetty.version>
-    <dependencies.servlet.version>3.1.0</dependencies.servlet.version>
-    <dependencies.jersey.version>2.25.1</dependencies.jersey.version>
-  </properties>
-
-  <prerequisites>
-    <maven>3.0.4</maven>
-  </prerequisites>
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
-  <distributionManagement>
-    <snapshotRepository>
-        <id>ossrh</id>
-        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-        <id>ossrh</id>
-        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-</distributionManagement>
-
-
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-webdav-jackrabbit</artifactId>
-        <version>2.10</version>
-      </extension>
-    </extensions>
-
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.eclipse.m2e</groupId>
-          <artifactId>lifecycle-mapping</artifactId>
-          <version>1.0.0</version>
-          <configuration>
-            <lifecycleMappingMetadata>
-              <pluginExecutions>
-                <pluginExecution>
-                  <pluginExecutionFilter>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>dk.dma</groupId>
+    <artifactId>dma-root-pom</artifactId>
+    <!-- Versions here is just a single incremental number no '.' -->
+    <version>24</version>
+    <packaging>pom</packaging>
+    <name>Dma Root Pom</name>
+    <description>The root pom for all maven projects under dma.dk</description>
+    <url>https://github.com/dma-dk</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <organization>
+        <name>Danish Maritime Authority</name>
+        <url>http://http://www.dma.dk/</url>
+    </organization>
+    <inceptionYear>2011</inceptionYear>
+    <developers>
+        <developer>
+            <name>Rasmus Madsen Jensen</name>
+            <email>rmj@dma.dk</email>
+            <organization>DMA</organization>
+            <organizationUrl>https://dma.dk</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git://github.com/dma-dk/dma-developers.git</connection>
+        <developerConnection>scm:git:ssh://github.com:dma-dk/dma-developers.git</developerConnection>
+        <url>https://github.com/dma-dk/dma-developers</url>
+    </scm>
+    <mailingLists>
+        <mailingList>
+            <name>Dma group</name>
+            <subscribe>http://groups.google.com/group/dma-dk/subscribe</subscribe>
+            <archive>http://groups.google.com/group/dma-dk</archive>
+        </mailingList>
+    </mailingLists>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <dependencies.guava.version>21.0</dependencies.guava.version>
+        <dependencies.metrics.version>3.1.0</dependencies.metrics.version>
+        <dependencies.slf4j.version>1.7.23</dependencies.slf4j.version>
+        <dependencies.jetty.version>9.4.0.v20161208</dependencies.jetty.version>
+        <dependencies.servlet.version>3.1.0</dependencies.servlet.version>
+        <dependencies.jersey.version>2.25.1</dependencies.jersey.version>
+    </properties>
+    <prerequisites>
+        <maven>3.0.4</maven>
+    </prerequisites>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>2.10</version>
+            </extension>
+        </extensions>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>com.googlecode.jslint4java</groupId>
+                                        <artifactId>jslint4java-maven-plugin</artifactId>
+                                        <versionRange>[2.0,)</versionRange>
+                                        <goals>
+                                            <goal>lint</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore />
+                                        <!-- <execute /> -->
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <!-- http://docs.jslint4java.googlecode.com/git-history/780e260b85a0a5a162eac5e94dc3dd104b433e81/2.0.2/maven.html
+            -->
+                    <!-- Using jshint would have been preferable, but existing maven plugins seems unsuitable
+            -->
+                    <!-- jshint-mojo : -->
+                    <!-- - https://github.com/cjdev/jshint-mojo. -->
+                    <!-- - Does not yet supply a checkstyle.xml or jslint.xml file with results. -->
+                    <!-- MavenPluginJSHint -->
+                    <!-- - http://code.google.com/p/wro4j/wiki/MavenPluginJsHint -->
+                    <!-- - Seems to be entangled in other web stuff, which makes it an unsuitable plugin
+            -->
+                    <!-- mulesoft/jshint-maven-plugin: -->
+                    <!-- - https://github.com/mulesoft/jshint-maven-plugin -->
+                    <!-- - no configuration options and no work done on the plugin for many months -->
                     <groupId>com.googlecode.jslint4java</groupId>
                     <artifactId>jslint4java-maven-plugin</artifactId>
-                    <versionRange>[2.0,)</versionRange>
-                    <goals>
-                      <goal>lint</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <ignore />
-                    <!-- <execute /> -->
-                  </action>
-                </pluginExecution>
-              </pluginExecutions>
-            </lifecycleMappingMetadata>
-          </configuration>
-        </plugin>
-
-        <plugin>
-          <!-- http://docs.jslint4java.googlecode.com/git-history/780e260b85a0a5a162eac5e94dc3dd104b433e81/2.0.2/maven.html
-            -->
-          <!-- Using jshint would have been preferable, but existing maven plugins seems unsuitable
-            -->
-          <!-- jshint-mojo : -->
-          <!-- - https://github.com/cjdev/jshint-mojo. -->
-          <!-- - Does not yet supply a checkstyle.xml or jslint.xml file with results. -->
-          <!-- MavenPluginJSHint -->
-          <!-- - http://code.google.com/p/wro4j/wiki/MavenPluginJsHint -->
-          <!-- - Seems to be entangled in other web stuff, which makes it an unsuitable plugin
-            -->
-          <!-- mulesoft/jshint-maven-plugin: -->
-          <!-- - https://github.com/mulesoft/jshint-maven-plugin -->
-          <!-- - no configuration options and no work done on the plugin for many months -->
-          <groupId>com.googlecode.jslint4java</groupId>
-          <artifactId>jslint4java-maven-plugin</artifactId>
-          <version>2.0.5</version>
-          <configuration>
-            <failOnError>false</failOnError>
-            <!-- https://code.google.com/p/jslint4java/issues/detail?id=91 -->
-            <excludes>
-              <exclude>**/ext/*.js</exclude>
-            </excludes>
-            <options>
-              <devel>true</devel>
-              <eqeq>true</eqeq>
-              <es5>true</es5>
-              <forin>true</forin>
-              <indent>4</indent>
-              <maxerr>1000</maxerr>
-              <maxlen>120</maxlen>
-              <node>false</node>
-              <nomen>false</nomen>
-              <passfail>false</passfail>
-              <plusplus>true</plusplus>
-              <predef>angular,$,jQuery,${jslint.predef}</predef>
-              <properties>false</properties>
-              <sloppy>true</sloppy>
-              <undef>true</undef>
-              <white>true</white>
-            </options>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <encoding>UTF-8</encoding>
-          <optimize>false</optimize>
-          <debug>true</debug>
-          <showDeprecation>true</showDeprecation>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.16</version>
-        <!-- <configuration> <parallel>methods</parallel> <threadCount>8</threadCount> </configuration>
+                    <version>2.0.5</version>
+                    <configuration>
+                        <failOnError>false</failOnError>
+                        <!-- https://code.google.com/p/jslint4java/issues/detail?id=91 -->
+                        <excludes>
+                            <exclude>**/ext/*.js</exclude>
+                        </excludes>
+                        <options>
+                            <devel>true</devel>
+                            <eqeq>true</eqeq>
+                            <es5>true</es5>
+                            <forin>true</forin>
+                            <indent>4</indent>
+                            <maxerr>1000</maxerr>
+                            <maxlen>120</maxlen>
+                            <node>false</node>
+                            <nomen>false</nomen>
+                            <passfail>false</passfail>
+                            <plusplus>true</plusplus>
+                            <predef>angular,$,jQuery,${jslint.predef}</predef>
+                            <properties>false</properties>
+                            <sloppy>true</sloppy>
+                            <undef>true</undef>
+                            <white>true</white>
+                        </options>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <optimize>false</optimize>
+                    <debug>true</debug>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.16</version>
+                <!-- <configuration><parallel>methods</parallel><threadCount>8</threadCount></configuration>
           -->
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <version>1.4.1</version>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-clean-plugin</artifactId>
-        <version>2.5</version>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-install-plugin</artifactId>
-        <version>2.5.2</version>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-        <version>3.6</version>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.8.2</version>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <executions>
-            <execution>
-                <id>attach-sources</id>
-                <goals>
-                    <goal>jar-no-fork</goal>
-                </goals>
-            </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.0.2</version>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>2.17</version>
-        <dependencies>
-          <dependency>
-            <groupId>dk.dma.tools</groupId>
-            <artifactId>dma-build-tool</artifactId>
-            <version>9</version>
-          </dependency>
-          <dependency>
-              <groupId>com.puppycrawl.tools</groupId>
-              <artifactId>checkstyle</artifactId>
-              <version>7.5.1</version>
-                <exclusions>
-                  <exclusion>
-                    <groupId>com.sun</groupId>
-                    <artifactId>tools</artifactId>
-                  </exclusion>
-                </exclusions>
-           </dependency>        
-        </dependencies>
-        <configuration>
-          <configLocation>dma-build-tool/checkstyle.xml</configLocation>
-          <suppressionsLocation>dma-build-tool/checkstyle-suppressions.xml</suppressionsLocation>
-          <headerLocation>dma-build-tool/LICENSE.txt</headerLocation>
-          <failsOnError>true</failsOnError>
-          <enableRulesSummary>true</enableRulesSummary>
-          <consoleOutput>true</consoleOutput>
-          <includeTestSourceDirectory>true</includeTestSourceDirectory>
-          <testSourceDirectory>src/test/java</testSourceDirectory>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <executions>
-            <execution>
-                <id>attach-javadocs</id>
-                <goals>
-                    <goal>jar</goal>
-                </goals>
-            </execution>
-        </executions>
-    </plugin>
-      <!--plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.10.4</version>
-        <configuration>
-          <additionalparam>-Xdoclint:none</additionalparam>
-          <excludePackageNames>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>1.4.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.6</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>dk.dma.tools</groupId>
+                        <artifactId>dma-build-tool</artifactId>
+                        <version>9</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>7.5.1</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>com.sun</groupId>
+                                <artifactId>tools</artifactId>
+                            </exclusion>
+                        </exclusions>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <configLocation>dma-build-tool/checkstyle.xml</configLocation>
+                    <suppressionsLocation>dma-build-tool/checkstyle-suppressions.xml</suppressionsLocation>
+                    <headerLocation>dma-build-tool/LICENSE.txt</headerLocation>
+                    <failsOnError>true</failsOnError>
+                    <enableRulesSummary>true</enableRulesSummary>
+                    <consoleOutput>true</consoleOutput>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <testSourceDirectory>src/test/java</testSourceDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-javadoc-plugin</artifactId><version>2.10.4</version><configuration><additionalparam>-Xdoclint:none</additionalparam><excludePackageNames>
             *.internal.*:*.deprecated.*:*.tck.*:*.test.*:*.jcip.*:*.examples.*:
-          </excludePackageNames>
-          <aggregate>true</aggregate>
-          <links>
-            <link>http://download.oracle.com/javase/7/docs/api/</link>
-          </links>
-          <showPackage>false</showPackage>
-          <showProtected>true</showProtected>
-        </configuration>
-      </plugin-->
-
-      <plugin>
-        <groupId>com.googlecode.maven-overview-plugin</groupId>
-        <artifactId>maven-overview-plugin</artifactId>
-        <version>1.6</version>
-      </plugin>
-
-      <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>2.5.3</version>
-          <configuration>
-            <mavenExecutorId>forked-path</mavenExecutorId>
-          </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.8</version>
-        <extensions>true</extensions>
-        <configuration>
-            <serverId>ossrh</serverId>
-            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.5</version>
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-            <configuration>
-              <gpgArguments>
-                  <arg>--pinentry-mode</arg>
-                  <arg>loopback</arg>
-              </gpgArguments>
-          </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-
-  <reporting>
-    <plugins>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.9.1</version>
-        <configuration>
-          <additionalparam>-Xdoclint:none</additionalparam>
-          <excludePackageNames>
+          </excludePackageNames><aggregate>true</aggregate><links><link>http://download.oracle.com/javase/7/docs/api/</link></links><showPackage>false</showPackage><showProtected>true</showProtected></configuration></plugin-->
+            <plugin>
+                <groupId>com.googlecode.maven-overview-plugin</groupId>
+                <artifactId>maven-overview-plugin</artifactId>
+                <version>1.6</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <mavenExecutorId>forked-path</mavenExecutorId>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.8</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                    <excludePackageNames>
 
 						*.internal.*:*.tck.*:*.test.*:*.jcip.*:*.examples.*:*.testcases.*:
 
           </excludePackageNames>
-          <aggregate>true</aggregate>
-          <links>
-            <link>http://download.oracle.com/javase/7/docs/api/</link>
-          </links>
-          <showPackage>false</showPackage>
-          <showProtected>true</showProtected>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>2.14</version>
-        <configuration>
-          <configLocation>dma-build-tool/checkstyle.xml</configLocation>
-          <suppressionsLocation>dma-build-tool/checkstyle-suppressions.xml</suppressionsLocation>
-          <headerLocation>dma-build-tool/LICENSE.txt</headerLocation>
-
-          <failsOnError>true</failsOnError>
-          <enableRulesSummary>true</enableRulesSummary>
-          <consoleOutput>true</consoleOutput>
-          <includeTestSourceDirectory>true</includeTestSourceDirectory>
-          <testSourceDirectory>src/test/java</testSourceDirectory>
-        </configuration>
-      </plugin>
-
-
-    </plugins>
-  </reporting>
-
-  <profiles>
-
-    
-
-  </profiles>
+                    <aggregate>true</aggregate>
+                    <links>
+                        <link>http://download.oracle.com/javase/7/docs/api/</link>
+                    </links>
+                    <showPackage>false</showPackage>
+                    <showProtected>true</showProtected>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.14</version>
+                <configuration>
+                    <configLocation>dma-build-tool/checkstyle.xml</configLocation>
+                    <suppressionsLocation>dma-build-tool/checkstyle-suppressions.xml</suppressionsLocation>
+                    <headerLocation>dma-build-tool/LICENSE.txt</headerLocation>
+                    <failsOnError>true</failsOnError>
+                    <enableRulesSummary>true</enableRulesSummary>
+                    <consoleOutput>true</consoleOutput>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <testSourceDirectory>src/test/java</testSourceDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+    <profiles></profiles>
 </project>
