@@ -32,19 +32,18 @@
             <organization>DMA</organization>
             <organizationUrl>https://dma.dk</organizationUrl>
         </developer>
+        <developer>
+            <name>Andreas Borchsenius Westh</name>
+            <email>andreas@lundogbendsen.dk</email>
+            <organization>Lund&Bendsen</organization>
+            <organizationUrl>https://lundogbendsen.dk</organizationUrl>
+        </developer>
     </developers>
     <scm>
         <connection>scm:git:git://github.com/dma-dk/dma-developers.git</connection>
         <developerConnection>scm:git:ssh://github.com:dma-dk/dma-developers.git</developerConnection>
         <url>https://github.com/dma-dk/dma-developers</url>
     </scm>
-    <mailingLists>
-        <mailingList>
-            <name>Dma group</name>
-            <subscribe>http://groups.google.com/group/dma-dk/subscribe</subscribe>
-            <archive>http://groups.google.com/group/dma-dk</archive>
-        </mailingList>
-    </mailingLists>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependencies.guava.version>21.0</dependencies.guava.version>
@@ -231,7 +230,7 @@
                     <dependency>
                         <groupId>com.puppycrawl.tools</groupId>
                         <artifactId>checkstyle</artifactId>
-                        <version>7.5.1</version>
+                        <version>8.25</version>
                         <exclusions>
                             <exclusion>
                                 <groupId>com.sun</groupId>
